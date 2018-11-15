@@ -28,7 +28,7 @@ describe("HomeComponent", () => {
 	});
 
 	it("should render title in a h1 tag", async(() => {
-		const compiled = fixture.debugElement.nativeElement;
+		const compiled: any = fixture.debugElement.nativeElement;
 		expect(compiled.querySelector("h1").textContent).toContain("PAGES.HOME.TITLE");
 	}));
 });

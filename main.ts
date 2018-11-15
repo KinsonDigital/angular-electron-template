@@ -1,15 +1,15 @@
-import { app, BrowserWindow, screen } from "electron";
+import { app, BrowserWindow, screen, Size } from "electron";
 import * as path from "path";
 import * as url from "url";
 
-let win, serve;
-const args = process.argv.slice(1);
-serve = args.some(val => val === "--serve");
+let win: BrowserWindow;
+let serve: boolean;
+const args: string[] = process.argv.slice(1);
+serve = args.some((val: string): boolean => val === "--serve");
 
-function createWindow() {
+function createWindow(): void {
 
-	const electronScreen = screen;
-	const size = electronScreen.getPrimaryDisplay().workAreaSize;
+	const size: Size = screen.getPrimaryDisplay().workAreaSize;
 
 	// Create the browser window.
 	win = new BrowserWindow({
@@ -41,7 +41,6 @@ function createWindow() {
 		// when you should delete the corresponding element.
 		win = null;
 	});
-
 }
 
 try {
