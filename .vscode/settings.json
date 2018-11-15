@@ -1,0 +1,6 @@
+{
+	"files.exclude": {
+		"main.js": true,
+		"main.js.map": true
+	}
+}
